@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  claimer:
+    build: .
+    volumes:
+      - ./src/claimed.txt:/packtpub/src/claimed.txt:rw
+      - ./src/filter.txt:/packtpub/src/filter.txt:rw
+    env_file:
+      - ./envs.env
+    restart: always
