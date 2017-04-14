@@ -16,3 +16,4 @@ docker-compose up -d
 # additional informations
 * In filter.txt you can add new line with unwanted books (words)
 * File claimed.txt will have list of saved titles
+* To make it work on Raspberry Pi or other devices with **ARM architecture** change content of Dockerfile to Dockerfile.rpi

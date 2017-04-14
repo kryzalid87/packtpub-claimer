@@ -46,7 +46,7 @@ class PaktPubClaimer(scrapy.Spider):
             book_title = brickset.css(TITLE_SELECTOR).extract_first().replace("\t", "").replace("\n", "")
             if(not self.unwanted_book(book_title)):
                 with open("claimed.txt", "a") as claim_file:
-                        claim_file.write(line + "\n");
+                        claim_file.write(book_title + "\n");
                 BOOK_CLAIM_SELECTOR = '.free-ebook a ::attr(href)'
                 next_page = response.css(BOOK_CLAIM_SELECTOR).extract_first()
                 if next_page:
